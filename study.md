@@ -149,4 +149,68 @@ switch (str) {
  }
  ```
 - do while문
+```java
+    import java.util.Scanner;
+
+    public class DoWhileExam {
+
+        public static void main(String[] args) {
+            int value = 0;
+
+            // Scanner는 java.util 패키지에 있는 클래스로써 키보드로 부터 값을 입력받는다던지 할 때 유용하게 사용할 수 있는 클래스입니다.
+            Scanner scan = new Scanner(System.in);
+            //위 처럼 작성하시면 키보드로부터 값을 입력받을 수 있는 Scanner객체가 생성됩니다. 
+
+            do{
+                value = scan.nextInt(); // Scanner클래스를 이용하여 키보드로 부터 숫자값을 입력받습니다.
+                System.out.println("입력받은 수 : " + value);  
+            }while(value != 10);  // 입력받은 값이 10이 아닐 경우에는 계속 반복합니다.
+
+            System.out.println("반복문 종료");
+        }
+    }
+```
 - for문
+```java
+for문을 이용하여 1부터 100까지의 짝수의 합을 구하는 프로그램
+    public class ForExam {
+
+        public static void main(String[] args) {
+            int total = 0;
+            for(int i = 1; i <= 100; i++){
+                if(i % 2 != 0){  // 2로 나눈 나머지가 0이 아니라는것은 홀수를 의미한다.  
+                    continue; // 홀수일 경우 total = total + i; 문장이 실행되지 않으므로, 결과적으로 짝수만 더해준다. 
+                }
+                total = total + i;
+            }
+            System.out.println(total);
+        }
+
+    }
+```
+
+# 6/1(월)
+- 배열 
+    -
+- 1차원 배열
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

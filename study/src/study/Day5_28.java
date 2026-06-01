@@ -1,5 +1,7 @@
 package study;
 
+import java.util.Scanner;
+
 public class Day5_28 {
 	public static void main(String[] args) {
 		// final 상수
@@ -145,11 +147,43 @@ public class Day5_28 {
 		}
 		
 		//do while
-		do {
-			// 반복할 문장들
-			
-		}while()
-
+//		int value1 = 0;
+//		Scanner sc = new Scanner(System.in);
+//		do {
+//			// 반복할 문장들
+//			value1 = sc.nextInt();
+//			System.out.println("입력받은 값 :"+ value1);
+//		}while(value1 != 10);
+//		
+//		System.out.println("반복문 종료! ");
+//		
+//		
+		
+		// for
+//		int totall = 0;
+//		for(int in = 1 ; in <= 100; in++ ) {
+//			totall = totall + in;
+//		}
+//		
+//		System.out.println(totall);
+//		
+		//1 에서 100 까지의 짝수의 합
+		int totall = 0;
+		for(int in = 1 ; in <= 100; in++ ) {
+			if(in % 2 != 0) {// 2로 나눈 나머지가 0이 아니라는것은 홀수를 의미한다.  
+				continue;//continue : 아랫쪽 것들을 아예 실행시키지 않는다
+			}
+			totall = totall + in;
+		}
+		
+		System.out.println(totall);
+		
+		//배열
+		int [] array1 = new int[100];
+		array1[0] = 50;
+		array1[10] = 100;
+		
+		
 	}
 
 }
