@@ -179,9 +179,19 @@ public class Day5_28 {
 		System.out.println(totall);
 		
 		//배열
-		int [] array1 = new int[100];
-		array1[0] = 50;
-		array1[10] = 100;
+		//- 배열생성
+		int[] array1 = new int[4]; // 정수4개를 저장할 수 있는 배열
+
+		//- 배열에 값 저장
+		array1[0] = 1;
+		array1[1] = 2;
+		array1[2] = 3;  
+		array1[3] = 4;
+		//자바에서 배열의 인덱스는 0번 부터 사용한다. 4개짜리 배열은 0 ~ 3 까지
+
+		//- 배열에 저장된 값 꺼내기
+		int value2 = array1[2];
+		System.out.println(value2);
 		
 		
 	}
