@@ -1,0 +1,54 @@
+연산자 우선순위
+1.( )
+2.산술연산자 * / + - 
+3.연결연산자 ||
+4.비교연산자 = > < >= <= <> != ^=
+5.IS NULL, NULL , LIKE ,IN
+6.BETWEEN AND
+7. NOT(논리 부정 연산자)
+8.AND
+9.OR
+
+조회 SELECT(테이블조회 SELECT 컬럼명 FROM 테이블명;)
+삽입 INSERT
+삭제 DELETE
+변경 UPDATE
+
+별칭 *AS생략가능, 한글도 사용가능
+AS (SELECT salary,salary*12 AS annual_salary FROM employees;
+
+DISTINCT
+조회할 컬럼의 중복을 제외하고 조회
+SELECT DISTINCT manager_id FROM employees;
+
+*급여 연봉 보너스포함 연봉 조회 식
+SELECT 
+    salary AS 월급,
+    salary * 12 AS 연봉,
+    (salary * 12) + (salary * 12 * NVL(commission_pct, 0)) AS "연봉(보너스포함)"  /*commission_pct, 보너스
+FROM employees;
+
+ORDER BY
+(SELECT문의 가장 마지막에 실행됨)
+- (defaule)ASC 오름차순(낮은거부터 높은거)
+- DESC 내림차순(높은거부터 낮은거)
+- NULLS FIRST NULL을 앞에 정렬(DESC 를 사용할 경우 기본값
+- NULLS LAST
+
+WHERE
+특정 조건에 만족하는 데이터만 조회함
+SELECT 컬럼명 FROM 테이블명 WHERE 조건식;
+
+컴퓨터(데이터베이스)가 인지하고 실행하는 순서는 완전히 다릅니다.
+ SQL 문의 논리적 실행 순서
+FROM (가장 먼저 어떤 테이블에서 데이터를 가져올지 찾고)
+WHERE (가져온 데이터 중 조건에 맞는 것만 필터링한 뒤)
+GROUP BY (필요하면 그룹으로 묶고)
+HAVING (그룹핑된 데이터에 조건을 또 걸고)
+SELECT (최종적으로 화면에 보여줄 칼럼들을 골라낸 다음)
+ORDER BY (맨 마지막에 정렬해서 보여줍니다.)
+암기 팁: 앞 글자만 따서 [프-웨-그-하-셀-오]로 외우시면 시험장에서 3초 만에 풀 수 있습니다.
+
+
+
+
